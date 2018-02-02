@@ -4,7 +4,7 @@
 #
 Name     : yelp-tools
 Version  : 3.18.0
-Release  : 1
+Release  : 2
 URL      : http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.18/yelp-tools-3.18.0.tar.xz
 Source0  : http://ftp.gnome.org/pub/GNOME/sources/yelp-tools/3.18/yelp-tools-3.18.0.tar.xz
 Summary  : No detailed summary available
