@@ -4,7 +4,7 @@
 #
 Name     : yelp-tools
 Version  : 3.28.0
-Release  : 4
+Release  : 5
 URL      : https://download.gnome.org/sources/yelp-tools/3.28/yelp-tools-3.28.0.tar.xz
 Source0  : https://download.gnome.org/sources/yelp-tools/3.28/yelp-tools-3.28.0.tar.xz
 Summary  : No detailed summary available
