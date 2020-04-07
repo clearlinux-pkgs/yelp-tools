@@ -4,7 +4,7 @@
 #
 Name     : yelp-tools
 Version  : 3.32.2
-Release  : 10
+Release  : 11
 URL      : https://download.gnome.org/sources/yelp-tools/3.32/yelp-tools-3.32.2.tar.xz
 Source0  : https://download.gnome.org/sources/yelp-tools/3.32/yelp-tools-3.32.2.tar.xz
 Summary  : No detailed summary available
@@ -64,20 +64,21 @@ license components for the yelp-tools package.
 
 %prep
 %setup -q -n yelp-tools-3.32.2
+cd %{_builddir}/yelp-tools-3.32.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562607875
+export SOURCE_DATE_EPOCH=1586245178
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -90,11 +91,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1562607875
+export SOURCE_DATE_EPOCH=1586245178
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/yelp-tools
-cp COPYING %{buildroot}/usr/share/package-licenses/yelp-tools/COPYING
-cp COPYING.GPL %{buildroot}/usr/share/package-licenses/yelp-tools/COPYING.GPL
+cp %{_builddir}/yelp-tools-3.32.2/COPYING %{buildroot}/usr/share/package-licenses/yelp-tools/91cdb2b9bee2de720d79abb2a88f00919c5de255
+cp %{_builddir}/yelp-tools-3.32.2/COPYING.GPL %{buildroot}/usr/share/package-licenses/yelp-tools/b47456e2c1f38c40346ff00db976a2badf36b5e3
 %make_install
 
 %files
@@ -125,5 +126,5 @@ cp COPYING.GPL %{buildroot}/usr/share/package-licenses/yelp-tools/COPYING.GPL
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/yelp-tools/COPYING
-/usr/share/package-licenses/yelp-tools/COPYING.GPL
+/usr/share/package-licenses/yelp-tools/91cdb2b9bee2de720d79abb2a88f00919c5de255
+/usr/share/package-licenses/yelp-tools/b47456e2c1f38c40346ff00db976a2badf36b5e3
