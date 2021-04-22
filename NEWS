@@ -1,3 +1,22 @@
+40.rc
+=====
+* Removed comment about revision version attrs from templates
+* Use /usr/bin/python3 as shebang
+
+40.beta
+=======
+* Added --skip option to skip files in yelp-check
+* Custom checkers in yelp-check return 1 on failure
+
+40.alpha
+========
+* First release using the meson build system
+* Converted yelp-build, yelp-check, and yelp-new to python
+* New and improved templates for yelp-new
+* Support for .yelp-tools.cfg config file
+* Config file can specify custom checkers, like Schematron but easier
+* yelp-check hrefs takes a configurable allow list
+
 3.38.0
 ======
 * Stable release. No changes since 3.37.90
