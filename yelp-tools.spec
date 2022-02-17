@@ -4,7 +4,7 @@
 #
 Name     : yelp-tools
 Version  : 41.0
-Release  : 14
+Release  : 15
 URL      : https://download.gnome.org/sources/yelp-tools/41/yelp-tools-41.0.tar.xz
 Source0  : https://download.gnome.org/sources/yelp-tools/41/yelp-tools-41.0.tar.xz
 Summary  : No detailed summary available
@@ -15,8 +15,8 @@ Requires: yelp-tools-data = %{version}-%{release}
 Requires: yelp-tools-license = %{version}-%{release}
 BuildRequires : buildreq-gnome
 BuildRequires : buildreq-meson
-BuildRequires : lxml
 BuildRequires : pkgconfig(yelp-xsl)
+BuildRequires : pypi-lxml
 
 %description
 ABOUT
@@ -73,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1632496954
+export SOURCE_DATE_EPOCH=1645122986
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
