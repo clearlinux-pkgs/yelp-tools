@@ -4,7 +4,7 @@
 #
 Name     : yelp-tools
 Version  : 42.0
-Release  : 18
+Release  : 19
 URL      : https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.0.tar.xz
 Source0  : https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.0.tar.xz
 Summary  : No detailed summary available
@@ -73,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1647727414
+export SOURCE_DATE_EPOCH=1664163884
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -87,8 +87,8 @@ ninja -v -C builddir
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/yelp-tools
-cp %{_builddir}/yelp-tools-42.0/COPYING %{buildroot}/usr/share/package-licenses/yelp-tools/91cdb2b9bee2de720d79abb2a88f00919c5de255
-cp %{_builddir}/yelp-tools-42.0/COPYING.GPL %{buildroot}/usr/share/package-licenses/yelp-tools/b47456e2c1f38c40346ff00db976a2badf36b5e3
+cp %{_builddir}/yelp-tools-%{version}/COPYING %{buildroot}/usr/share/package-licenses/yelp-tools/91cdb2b9bee2de720d79abb2a88f00919c5de255 || :
+cp %{_builddir}/yelp-tools-%{version}/COPYING.GPL %{buildroot}/usr/share/package-licenses/yelp-tools/b47456e2c1f38c40346ff00db976a2badf36b5e3 || :
 DESTDIR=%{buildroot} ninja -C builddir install
 
 %files
